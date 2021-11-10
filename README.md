@@ -20,7 +20,7 @@ Artifact evaluation for ICSE 2022 SEIP submission "When Cyber-Physical Systems M
 - The folder `tools` includes two widely-used falsification tools, namely, Breach and S-TaLiRo. We select Global Nelder-Mead (GNM) and CMAES for Breach, and Simulated Annealing (SA) and stochastic optimization with adaptive restart (SOAR) for S-TaLiRo;
 - The folder `CPS` stores 9 CPS and each CPS subfolder includes the CPS with traditional and DRL controllers;
 - The folder `train` stores the training scripts of the DRL controllers. stores the simulink models with DRL controllers based different agents;
-- The folder `RQ1` stores the scripts for comparing performance betweeen AI-enabled CPS and traditional CPS;
+- The folder `RQ1` stores the scripts for comparing performance between AI-enabled CPS and traditional CPS;
 - The folder `RQ2` stores the scripts which can be used to evaluate the effectiveness of falsification approaches on AI-enabled CPS;
 - The folder `RQ3` stores the CPS with hybrid controllers and the scripts that evaluate the performance of the hybrid controllers we design.
 
