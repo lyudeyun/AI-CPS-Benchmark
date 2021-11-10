@@ -1,6 +1,6 @@
 # AI-CPS-Benchmark
 
-Artifact evaluation for NFM 2021 submission "When Cyber-Physical Systems Meet AI: A Benchmark, an Evaluation, and a Way Forward" by Jiayang Song, Deyun Lyu, Zhenya Zhang, Zhijie Wang, Tianyi Zhang and Lei Ma.
+Artifact evaluation for ICSE 2022 SEIP submission "When Cyber-Physical Systems Meet AI: A Benchmark, an Evaluation, and a Way Forward" by Jiayang Song, Deyun Lyu, Zhenya Zhang, Zhijie Wang, Tianyi Zhang and Lei Ma.
 
 ## System requirement
 
@@ -9,16 +9,22 @@ Artifact evaluation for NFM 2021 submission "When Cyber-Physical Systems Meet AI
 - MATLAB toolboxes dependency
   1. [Simulink](https://www.mathworks.com/products/simulink.html)
   2. [Stateflow](https://www.mathworks.com/products/stateflow.html)
-  3. [Model Predictive Control Toolbox](https://www.mathworks.com/help/mpc/index.html)
+  3. [Model Predictive Control Toolbox](https://www.mathworks.com/products/model-predictive-control.html)
   4. [Deep Learning Toolbox](https://www.mathworks.com/products/deep-learning.html)
   5. [Reinforcement Learning Toolbox](https://www.mathworks.com/products/reinforcement-learning.html)
   6. [Automated Driving Toolbox](https://www.mathworks.com/products/automated-driving.html)
-  7. 
-
-
+  
 ## Code Structure
 
-The folder `` stores the simulink models with DRL controllers based different agents. 
+The folder `AI-CPS-Benchmark` includes 9 CPS and their corresponding training code. besides, model performance comparison and falsification scripts are also included in this folder.
+The folder `tools` includes two widely-used falsification tools, namely, Breach and S-TaLiRo. We select Global Nelder-Mead (GNM) and CMAES for Breach, and Simulated Annealing (SA) and stochastic optimization with adaptive restart (SOAR) for S-TaLiRo;
+The folder `CPS` stores 9 CPS and each CPS subfolder includes the CPS with traditional and DRL controllers;
+The folder `train` stores the training scripts of the DRL controllers. stores the simulink models with DRL controllers based different agents;
+The folder `RQ1` stores the scripts for comparing performance betweeen AI-enabled CPS and traditional CPS;
+The folder `RQ2` stores the scripts which can be used to evaluate the effectiveness of falsification approaches on AI-enabled CPS;
+The folder `RQ3` stores the CPS with hybrid controllers and the scripts that evaluate the performance of the hybrid controllers we design.
+
+
 
 ## Installation
 
@@ -41,8 +47,7 @@ The folder `` stores the simulink models with DRL controllers based different ag
   5. Type `help staliro` to get a detailed description of the toolbox and refer to the demos folder to run sample problems handled by the tool.
 - Installation of SOAR algorithm, see [here](https://github.com/Lmathesen/S-TaLiRO-SOAR-Optimizers).
 
- 
  ## How to run the script 
- - RQ1: Performance of AI-CPS VS. Traditional CPS. 
- - RQ2: Effectiveness of Falsification. For each benchmark, given a specification φ and an input signal u, XXX_falsification.m is used to validate if the model violates the specification φ.
- - RQ3: Combining Traditional and AI controllers.
+ - RQ1: Performance of AI-CPS VS. Traditional CPS. For each benchmark,
+ - RQ2: Effectiveness of Falsification. For each benchmark, given a specification φ and an input signal u, XXX_breach.m and XXX_staliro.m is used to validate if the CPS violates the specification φ.
+ - RQ3: Combining Traditional and AI controllers. The model
