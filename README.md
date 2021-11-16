@@ -25,7 +25,7 @@ Artifact evaluation for ICSE 2022 SEIP submission "When Cyber-Physical Systems M
 - `RQ2/`  stores the scripts for replicating the results of RQ2, where we evaluate the effectiveness of different falsification approaches on AI-enabled CPS;
 - `RQ3/` stores the scripts for replicating the results of RQ3, where we construct CPS with hybrid controllers and evaluate their performances using the methods in RQ1 and RQ2.
 
-- The folder `tools/` includes two widely-used falsification tools, namely, Breach and S-TaLiRo. Specifically, we select Global Nelder-Mead (GNM) and CMAES for Breach, and Simulated Annealing (SA) and stochastic optimization with adaptive restart (SOAR) for S-TaLiRo. Details can be found here.
+- The folder `tools/` includes two widely-used falsification tools, namely, Breach and S-TaLiRo. Specifically, we select Global Nelder-Mead (GNM) and CMAES for Breach, and Simulated Annealing (SA) and stochastic optimization with adaptive restart (SOAR) for S-TaLiRo. Details can be found [here](https://sites.google.com/view/ai-cps-benchmark/rq2-falsification).
 
 ## Installation
 
@@ -49,6 +49,4 @@ Artifact evaluation for ICSE 2022 SEIP submission "When Cyber-Physical Systems M
 - Installation of SOAR algorithm, see [here](https://github.com/Lmathesen/S-TaLiRO-SOAR-Optimizers).
 
  ## How to run the script 
- - RQ1: Performance of AI-CPS VS. Traditional CPS. For each benchmark,
- - RQ2: Effectiveness of Falsification. For each benchmark, given a specification φ and an input signal u, XXX_breach.m and XXX_staliro.m is used to validate if the CPS violates the specification φ.
- - RQ3: Combining Traditional and AI controllers. The model
+- Details can be found [here](https://sites.google.com/view/ai-cps-benchmark/replication-package)
