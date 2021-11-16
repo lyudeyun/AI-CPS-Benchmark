@@ -16,15 +16,16 @@ Artifact evaluation for ICSE 2022 SEIP submission "When Cyber-Physical Systems M
   
 ## Code Structure
 
-- The folder `AI-CPS-Benchmark` includes 9 CPS and their corresponding training code. besides, model performance comparison and falsification scripts are also included in this folder.
-- The folder `tools` includes two widely-used falsification tools, namely, Breach and S-TaLiRo. We select Global Nelder-Mead (GNM) and CMAES for Breach, and Simulated Annealing (SA) and stochastic optimization with adaptive restart (SOAR) for S-TaLiRo;
-- The folder `CPS` stores 9 CPS and each CPS subfolder includes the CPS with traditional and DRL controllers;
-- The folder `train` stores the training scripts of the DRL controllers. stores the simulink models with DRL controllers based different agents;
-- The folder `RQ1` stores the scripts for comparing performance between AI-enabled CPS and traditional CPS;
-- The folder `RQ2` stores the scripts which can be used to evaluate the effectiveness of falsification approaches on AI-enabled CPS;
-- The folder `RQ3` stores the CPS with hybrid controllers and the scripts that evaluate the performance of the hybrid controllers we design.
+- The directory `AI-CPS-Benchmark/` contains a `benchmarks/` sub-directory and a `tools/`. The former stores the 9 CPS models introduced in Benchmarks, and the latter involves two falsification tools, namely Breach and S-TaLiRo, used for RQ2: Falsification .
+- The directory `benchmarks/` has 9 sub-directories, each storing one CPS model introduced in Benchmarks. Each model directory has a similar structure, and we take the directory `ACC/` as an example of illustration.
+- `ACC/` involves the following sub-directories:
+- `traditional/` stores the original ACC Simulink model with a traditional controller. 
+- `DRL/` has three sub-directories: `train/`, `model/`, `agent/`. The folder `train/` stores the scripts for training DRL controllers,  `model/` stores the Simulink models with trained DRL controllers,  and `agent/` stores the trained agents (DRL controllers) based on different DRL algorithms.
+- `RQ1/` stores the scripts for replicating the results of RQ1, where we compare the performances between AI-enabled CPS and traditional CPS;
+- `RQ2/`  stores the scripts for replicating the results of RQ2, where we evaluate the effectiveness of different falsification approaches on AI-enabled CPS;
+- `RQ3/` stores the scripts for replicating the results of RQ3, where we construct CPS with hybrid controllers and evaluate their performances using the methods in RQ1 and RQ2.
 
-
+- The folder `tools/` includes two widely-used falsification tools, namely, Breach and S-TaLiRo. Specifically, we select Global Nelder-Mead (GNM) and CMAES for Breach, and Simulated Annealing (SA) and stochastic optimization with adaptive restart (SOAR) for S-TaLiRo. Details can be found here.
 
 ## Installation
 
