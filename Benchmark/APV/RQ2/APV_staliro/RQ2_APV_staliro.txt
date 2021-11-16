@@ -1,0 +1,6 @@
+% simulink model
+mdl_list = {'APV_T_breach','APV_RL_breach'};
+% DRL agent
+agent_list = {'APV_DDPG_Agent','APV_TD3_Agent'};
+% falsification algorithm
+solver_list = {'GNM','cmaes'};

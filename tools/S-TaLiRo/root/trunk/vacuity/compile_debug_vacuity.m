@@ -1,0 +1,1 @@
+mex -g -v mx_debugging.c cache.c distances.c lex.c mtl_vacuity.c parse.c rewrt.c

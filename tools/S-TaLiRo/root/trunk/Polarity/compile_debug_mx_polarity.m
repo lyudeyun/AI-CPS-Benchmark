@@ -1,0 +1,1 @@
+mex -g -v mx_polarity.c cache.c lex.c parse.c rewrt.c polarity.c 

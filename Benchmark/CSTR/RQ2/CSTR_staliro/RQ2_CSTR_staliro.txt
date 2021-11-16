@@ -1,0 +1,6 @@
+% simulink model
+mdl_list = {'CSTR_T_staliro','CSTR_RL_staliro'};
+% DRL agent
+agent_list = {'CSTR_DDPG_Agent','CSTR_PPO_Agent','CSTR_TD3_Agent'};
+% falsification algorithm
+solver_list = {'SA','SOAR'};

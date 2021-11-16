@@ -1,0 +1,6 @@
+% simulink model
+mdl_list = {'AFC_T_breach','AFC_RL_1_breach', 'AFC_RL_2_breach'};
+% DRL agent
+agent_list = {'AFC_DDPG_Agent','AFC_PPO_Agent','AFC_A2C_Agent'};
+% falsification algorithm
+solver_list = {'GNM','cmaes'};

@@ -1,0 +1,6 @@
+% simulink model
+mdl_list = {'ACC_RL_breach'};
+% DRL agent
+agent_list = {'ACC_DDPG_Agent','ACC_SAC_Agent','ACC_TD3_Agent'};
+% falsification algorithm
+solver_list = {'cmaes','GNM'};

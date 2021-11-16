@@ -1,0 +1,61 @@
+Autotrans_shift
+---------------
+
+Source:
+- https://github.com/decyphir/breach/blob/master/Ext/Models/Autotrans_shift.mdl (commit a65304c on Jun 18, 2018)
+
+Description:
+Bardh Hoxha, Houssam Abbas, Georgios Fainekos
+Benchmarks for Temporal Logic Requirements for Automotive Systems
+ARCH 2014
+
+Inputs:
+
+    Any input signal subject to the constraints
+        0 <= throttle and throttle <= 100
+        0 <= brake and brake < 350
+    Note: throttle and brake can be enabled simultaneously
+
+    Gidon: the following is up to debate:
+
+    Alternative 1: The number of control points can be arbitrary,
+    but the tool configuration must be the same for all requirements.
+    For example, the first two requirements are trivially falsified
+    with a single constant input segment, but others won't be,
+    and the tool must be able to discover this itself.
+    (Note: doing so is a feature of FalStar)
+
+    Alternative 2: The number of control points is fixed to X
+    Alternative 3: The number of control intervals is fixed to Y time units     
+
+    FalStar can do Alternative 2, but 3 probably needs a bit of implementation.
+
+
+Requirements:
+
+    The specific choice of parameters is such that falsification is possible.
+    Some requirements are easy (for humans/for some algorithms),
+    some others may be hard e.g., for random sampling.
+
+    Note: the requirement numbers refer to Table 1 in the publication.
+
+    AT2 here concerns the engine speed RPM only.
+
+    There are a few variants for AT6 and it is written a little bit different.
+    Feel free to reformulate into the original form
+        not ( (eventually_[0,T] speed > ...) and (always RPM < ...) )
+
+    Gidon: the parameters and requirements are up to debate
+
+    □ = always
+    ◇ = eventually
+
+    AT1:  □_[0.0, 20.0] (speed < 120.0)
+    AT2:  □_[0.0, 10.0] (RPM < 4750.0)
+    AT51: □_[0.0, 30.0] ((!(gear == 1.0) && ◇_[0.001, 0.1] (gear == 1.0)) ==> ◇_[0.001, 0.1] □_[0.0, 2.5] (gear == 1.0))
+    AT52: □_[0.0, 30.0] ((!(gear == 2.0) && ◇_[0.001, 0.1] (gear == 2.0)) ==> ◇_[0.001, 0.1] □_[0.0, 2.5] (gear == 2.0))
+    AT53: □_[0.0, 30.0] ((!(gear == 3.0) && ◇_[0.001, 0.1] (gear == 3.0)) ==> ◇_[0.001, 0.1] □_[0.0, 2.5] (gear == 3.0))
+    AT54: □_[0.0, 30.0] ((!(gear == 4.0) && ◇_[0.001, 0.1] (gear == 4.0)) ==> ◇_[0.001, 0.1] □_[0.0, 2.5] (gear == 4.0))
+    AT6a: (□_[0.0, 30.0] (RPM < 3000.0) ==> □_[0.0, 4.0] (speed < 35.0))
+    AT6b: (□_[0.0, 30.0] (RPM < 3000.0) ==> □_[0.0, 8.0] (speed < 50.0))
+    AT6c: (□_[0.0, 30.0] (RPM < 3000.0) ==> □_[0.0, 20.0] (speed < 65.0))

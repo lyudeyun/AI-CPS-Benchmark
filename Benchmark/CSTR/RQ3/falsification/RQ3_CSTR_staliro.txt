@@ -1,0 +1,6 @@
+% hybrid simulink model
+hybrid_mdl_list = {'CSTR_hybrid_staliro','CSTR_hybrid_random_01_staliro', 'CSTR_hybrid_random_1_staliro', 'CSTR_hybrid_average_staliro'};
+% hybrid DRL agent
+hybrid_agent_list = {'CSTR_TD3_Agent'};
+% falsification algorithm
+solver_list = {'SA','SOAR'};
