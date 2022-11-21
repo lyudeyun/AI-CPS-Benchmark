@@ -49,5 +49,5 @@ Artifact evaluation for ICSE 2022 SEIP submission "When Cyber-Physical Systems M
   6. Installation of SOAR algorithm, see [here](https://github.com/Lmathesen/S-TaLiRO-SOAR-Optimizers).
 
  ## How to run the script 
-- Details can be found [here](https://sites.google.com/view/ai-cps-benchmark/replication-package)
+- Details can be found [here]https://sites.google.com/view/ai-cps-siege/home)
 >>>>>>> a5d9e99dac1de2d5d38bce2b91656fbc27b396bf
